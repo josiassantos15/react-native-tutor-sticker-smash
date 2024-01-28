@@ -3,8 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Platform } from 'react-native';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from 'react-native-view-shot';
-import domtoimage from 'dom-to-image';
 
+import domtoimage from 'dom-to-image';
 import Button from './components/Button';
 import ImageViewer from './components/ImageViewer';
 import CircleButton from './components/CircleButton';
@@ -89,6 +89,7 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
+      <StatusBar style="auto" />
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <View ref={imageRef} collapsable={false}>
